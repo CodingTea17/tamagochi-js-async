@@ -4,6 +4,7 @@ export class Tamagotchi {
     this.foodlevel = 10;
     this.color = color;
     this.stamina = 10;
+    this.mood = 10;
   }
   // Eating Stuff
   digestFood() {
@@ -33,12 +34,23 @@ export class Tamagotchi {
     }, 420000);
   }
 
+  moodSwing() {
+    setInterval(() => {
+      if(this.mood > 0) {
+        this.mood--;
+      } else {
+
+      }
+    }, 180000);
+  }
+
   nap() {
     if(this.stamina + 1 > 10) {
       this.stamina = 10;
     } else {
       this.stamina++;
     }
+    this.foodlevel -= 1;
   }
 
   sleep() {
@@ -47,6 +59,16 @@ export class Tamagotchi {
     } else {
       this.stamina+= 3;
     }
+    this.foodlevel -= 2;
+  }
+
+  play() {
+    if(this.mood + 2 > 10) {
+      this.mood = 10;
+    } else {
+      this.mood += 2;
+    }
+    this.stamina -= 2;
   }
 
 }

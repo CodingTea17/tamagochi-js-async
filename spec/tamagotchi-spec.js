@@ -11,6 +11,8 @@ describe('Tamagotchi', () => {
     g_pig.color = "brindle";
     g_pig.digestFood();
     g_pig.expendStaminaChilling();
+    g_pig.moodSwing();
+    g_pig.mood = 10;
   });
 
   afterEach(() => {
@@ -55,5 +57,17 @@ describe('Tamagotchi', () => {
     jasmine.clock().tick(1260001);
     g_pig.sleep()
     expect(g_pig.stamina).toEqual(10)
+  });
+
+  it('should increase the tamagotchi\'s by two', () => {
+    jasmine.clock().tick(360001);
+    g_pig.play()
+    expect(g_pig.mood).toEqual(10)
+    expect(g_pig.stamina).toEqual(8)
+  });
+
+  it('should decrease mood by 1 every three minutes', () => {
+    jasmine.clock().tick(180001);
+    expect(g_pig.mood).toEqual(9)
   });
 });
