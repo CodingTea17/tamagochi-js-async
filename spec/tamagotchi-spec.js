@@ -6,9 +6,11 @@ describe('Tamagotchi', () => {
   beforeEach(() => {
     jasmine.clock().install();
     g_pig.foodlevel = 10;
+    g_pig.stamina = 10;
     g_pig.name = "Gumdrop";
     g_pig.color = "brindle";
     g_pig.digestFood();
+    g_pig.expendStaminaChilling();
   });
 
   afterEach(() => {
@@ -36,4 +38,10 @@ describe('Tamagotchi', () => {
     g_pig.feedFood(carrot);
     expect(g_pig.foodlevel).toEqual(10);
   });
-})
+
+  it('should drop one stamina level every 7 minutes', () => {
+    jasmine.clock().tick(420001);
+
+    expect(g_pig.stamina).toEqual(9);
+  });
+});
