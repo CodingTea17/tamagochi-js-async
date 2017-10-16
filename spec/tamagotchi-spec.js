@@ -8,7 +8,6 @@ describe('Tamagotchi', () => {
     g_pig.foodlevel = 10;
     g_pig.stamina = 10;
     g_pig.name = "Gumdrop";
-    g_pig.color = "brindle";
     g_pig.digestFood();
     g_pig.expendStaminaChilling();
     g_pig.moodSwing();

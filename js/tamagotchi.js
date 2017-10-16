@@ -1,8 +1,8 @@
 export class Tamagotchi {
-  constructor(name, color) {
+  constructor(name) {
     this.name = name;
     this.foodlevel = 10;
-    this.color = color;
+    this.color = '#ffffff';
     this.stamina = 10;
     this.mood = 10;
   }
