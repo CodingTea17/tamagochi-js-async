@@ -56,6 +56,7 @@ describe('Tamagotchi', () => {
   it('should add three stamina level for sleep', () => {
     jasmine.clock().tick(1260001);
     g_pig.sleep()
+    expect(g_pig.foodlevel).toEqual(4)
     expect(g_pig.stamina).toEqual(10)
   });
 
