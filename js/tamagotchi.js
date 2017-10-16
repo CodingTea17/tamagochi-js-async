@@ -32,6 +32,23 @@ export class Tamagotchi {
       }
     }, 420000);
   }
+
+  nap() {
+    if(this.stamina + 1 > 10) {
+      this.stamina = 10;
+    } else {
+      this.stamina++;
+    }
+  }
+
+  sleep() {
+    if(this.stamina + 3 > 10) {
+      this.stamina = 10;
+    } else {
+      this.stamina+= 3;
+    }
+  }
+
 }
 ////////////////////////////////////////
 export class Food {

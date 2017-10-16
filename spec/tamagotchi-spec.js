@@ -44,4 +44,16 @@ describe('Tamagotchi', () => {
 
     expect(g_pig.stamina).toEqual(9);
   });
+
+  it('should add one stamina level for nap', () => {
+    jasmine.clock().tick(420001);
+    g_pig.nap()
+    expect(g_pig.stamina).toEqual(10)
+  });
+
+  it('should add three stamina level for sleep', () => {
+    jasmine.clock().tick(1260001);
+    g_pig.sleep()
+    expect(g_pig.stamina).toEqual(10)
+  });
 });
