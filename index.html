@@ -10,23 +10,131 @@
   </head>
   <body>
     <div class="container">
-      <div class="row justify-content-center">
+      <div id="heading">
+        <p>Tamagotchi Creator</p>
+      </div>
+      <div id="form-card" class="row justify-content-center">
         <div class="col-6">
-          <form id="name-yo-tama">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input id="name" class="form-control">
+          <div class="card">
+            <div class="card-body">
+              <form id="tamagotchi-form">
+                <div class="form-group row">
+                  <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Ex. Gumdrop">
+                  </div>
+                </div>
+                <fieldset class="form-group">
+                  <div class="row">
+                    <!-- <legend class="col-form-legend col-sm-2">Tamagotchi Type:</legend> -->
+                    <div class="col-12">
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/chick.png">
+                          <img src="./imgs/chick.png">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/cow.png">
+                          <img src="./imgs/cow.png">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/crab.png">
+                          <img src="./imgs/crab.png">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="form-group">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/fox.png">
+                          <img src="./imgs/fox.png">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/hedgehog.png">
+                          <img src="./imgs/hedgehog.png">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/koala.png">
+                          <img src="./imgs/koala.png">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="form-group">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/pig.png">
+                          <img src="./imgs/pig.png">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/tiger.png">
+                          <img src="./imgs/tiger.png">
+                        </label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="animal" value="./imgs/whale.png">
+                          <img src="./imgs/whale.png">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <button class="btn btn-success btn-block" type="submit">Create Tamagotchi</button>
+              </form>
             </div>
-            <button class="btn btn-success" type="submit">Create Tamagotchi</button>
-          </form>
+          </div>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-6">
-          <div id="tama-name"></div>
-          <div id="foodlevel"></div>
-          <div id="stamina"></div>
-          <div id="mood"></div>
+        <div class="col-5">
+          <div id="tamagotchi-card" class="">
+            <div class="">
+              <div class="row justify-content-center mb-4">
+                <div class="col-4">
+                  <div id="tamagotchi-img"></div>
+                </div>
+                <div class="col-6">
+                  <div id="tamagotchi-name"></div>
+                  <div id="foodlevel"></div>
+                  <div id="stamina"></div>
+                  <div id="mood"></div>
+                </div>
+              </div>
+              <div class="row justify-content-center mt-4">
+                <div class="col-8">
+                  <button type="button" class="btn btn-primary" id="play">Play</button>
+                  <button type="button" class="btn btn-warning text-white" id="eat">Eat</button>
+                  <button type="button" class="btn btn-danger" id="nap">Nap</button>
+                  <button type="button" class="btn btn-secondary" id="sleep">Sleep</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div id="restart">
+            <a href="/" class="text-white">I died. Take better care of me next time...</a>
+          </div>
         </div>
       </div>
     </div>

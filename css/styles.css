@@ -1,0 +1,59 @@
+body {
+  background-image: url("./../../imgs/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.btn-secondary {
+  background-color: #563d7c !important;
+  border-color: #563d7c !important;
+}
+
+.btn-warning {
+  background-color: #ff9800 !important;
+  border-color: #ff9800 !important;
+}
+
+.btn-warning:hover {
+  background-color: #cc7a00 !important;
+  border-color: #cc7a00 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #4a356b !important;
+  border-color: #4a356b !important;
+}
+
+
+.btn-danger {
+  background-color: #cf245e !important;
+  border-color: #cf245e !important;
+}
+
+.btn-danger:hover {
+  background-color: #b9203b !important;
+  border-color: #b9203b !important;
+}
+
+#tamagotchi-card, #restart {
+  display: none;
+}
+
+#heading {
+  font-weight: 900;
+  font-size: 75px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  text-align: center;
+  color:;
+}
+
+#restart {
+  display: none;
+  font-size: 50px;
+  text-align:center;
+}
